@@ -44,6 +44,10 @@ const router = createBrowserRouter([
     path: "/refining",
     element: <Refining />,
   },
+  {
+    path: "/contact-us",
+    element: <Contact />,
+  },
  
 ]);
 function App() {

@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'Refinery_bg': "url('lg.jpg')",
+      
+      },
       fontFamily: {
         'sans': ['Open Sans', 'sans-serif']
       },

@@ -1,15 +1,21 @@
+import Footer from "../components/footer";
 import Crumb from "../containers/breadCrump";
 import Navbar from "../containers/navbar";
-import Footer from "./footer";
+import { ArrowListItem, TitleOver } from "../components";
 
-export default function Layout(props) {
+import Layout from "../components/layout";
+import bg from './../assets/breadcrumbs/about.png'
+import About_img from './../assets/images/about_us.png'
+
+
+export default function About(props) {
+
     return (
-        <div class="w-full h-full bg-gray-200 flex flex-col">
-            <Navbar black={true}/>
-            {/* <Crumb details={props.details}/> */}
-            {props.children}
-            {/* <Footer/> */}
-           
+        <div className="h-screen">
+            <Navbar black={true} />
+            <Crumb details={props.details} />
+           {props.children}
+            <Footer />
         </div>
     );
 }

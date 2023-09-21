@@ -22,7 +22,7 @@ export const Categorycard = (props) => {
 
 export const Clientcard = (props) => {
     return (
-        <div class="md:w-1/6  h-full bg-transparent  flex flex-col border border-white border-2 pb-5 ">
+        <div class="md:w-1/6  h-full bg-transparent  flex flex-col  pb-5 ">
             <img src={props.img} className='h-full w-full object-cover ' alt="" />
         </div>
     )
@@ -65,7 +65,7 @@ export const TitleOver = (props) => {
         <div className='w-full flex pb-10' style={{ alignSelf: 'start' }}>
             <div className=" flex  flex-col" >
                 <div className="h-1 w-10 bg-gold mb-2" style={{ alignSelf: 'start' }}></div>
-                <h1 className="text-2xl font-bold text-gold" style={{ fontSize: props.fontsize && props.fontsize, color: props.color && props.color }}>{props.title}</h1>
+                <h1 className="text-2xl font-bold text-gold capitalize" style={{ fontSize: props.fontsize && props.fontsize, color: props.color && props.color }}>{props.title}</h1>
             </div>
         </div>
     )
@@ -97,6 +97,59 @@ export function ArrowListItem(props) {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
                 <p className='hover:text-gold text-white capitalize'>{props.title}</p>
+            </div>
+
+        </div>
+    )
+}
+
+export function ContactContainer(props) {
+    return (
+
+        <div className="w-full flex ">
+            <div className="w-1/6 ">
+                <div className="w-[60px] bg-gold flex h-[60px] rounded-full justify-center items-center ">
+                    {props.icon}
+                </div>
+            </div>
+            <div className="w-5/6 flex flex-col justify-center ">
+                <div className="font-bold  capitalize text-slate-800">
+                    {props.title}
+                </div>
+                <div className="text-slate-500">
+                    {props.value}
+                </div>
+
+            </div>
+        </div>
+
+    )
+}
+export function InputContainer(props) {
+    return (
+
+        <div className="flex flex-col gap-y-4">
+            <div className="font-bold text-xl capitalize">{props.label}:</div>
+            <input type="text" className=" flex  w-full bg-blue-100 h-10 rounded-md  " />
+        </div>
+
+    )
+}
+
+export function ArrowNOnhovered(props) {
+    return (
+        <div className=' text-justify px-5 items-center'>
+            <div className='flex w-full gap-x-2 '>
+                {!props.arrow ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                    className="w-6 h-6 font-bold hover:text-gold text-white"
+                    style={{ fontSize: props.color && props.color, color: props.color && props.color }}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg> :
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                }
+                <p className='hover:text-gold text-white capitalize' style={{ fontSize: props.color && props.color, color: props.color && props.color }}>{props.title}</p>
             </div>
 
         </div>
