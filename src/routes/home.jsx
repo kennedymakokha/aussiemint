@@ -7,6 +7,8 @@ import Footer from "../components/footer";
 import Stats from "../components/stats";
 import Investors from "../components/investors";
 import Subscription from "../components/subscription";
+import Investor_trust from "../components/investor_trust";
+import News from "../components/news";
 
 
 export default function Home() {
@@ -31,10 +33,10 @@ export default function Home() {
         }
     }
     return (
-        <div className="w-full h-screen flex flex-col">
+        <div className="w-screen h-screen flex flex-col">
             <div className="bg-gray-400 w-full h-full relative z-0">
                 <Gallery title={title} TitleFunc={() => TitleFunc()} setCourasel={setCourasel} />
-                <div className="absolute right-10 top-0 flex  z-10">
+                <div className="absolute right-20 left-0 top-0 flex  z-10">
                     <Navbar courasel={courasel} />
                 </div>
             </div>
@@ -42,7 +44,10 @@ export default function Home() {
             <div className="h-full w-full">
                 <RefServices setCourasel={setCourasel} />
                 <Stats />
+                <News />
+                <Investor_trust />
                 <Subscription />
+                
                 <Investors />
                 <Footer />
             </div>

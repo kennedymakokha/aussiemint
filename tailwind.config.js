@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'Refinery_bg': "url('lg.jpg')",
+        'Refinery_bg': "url('refinery-bg.png')",
       
       },
       fontFamily: {

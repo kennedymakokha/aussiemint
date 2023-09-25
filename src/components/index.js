@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 export const Categorycard = (props) => {
     return (
-        <div class="md:w-1/3 w-full  h-full hover:bg-slate-400 bg-slate-200 flex flex-col border border-white border-2 pb-5 ">
-            <div class="w-full h-1/2 relative  ">
+        <div className="md:w-1/3 w-full  h-full hover:bg-slate-400 bg-slate-200 flex flex-col border border-white border-2 pb-5 ">
+            <div className="w-full h-1/2 relative  ">
                 <img src={props.img} className='h-full w-full object-fit ' alt="" />
 
 
@@ -22,7 +22,7 @@ export const Categorycard = (props) => {
 
 export const Clientcard = (props) => {
     return (
-        <div class="md:w-1/6  h-full bg-transparent  flex flex-col  pb-5 ">
+        <div className="md:w-1/4  h-full bg-transparent  flex flex-col  pb-0 ">
             <img src={props.img} className='h-full w-full object-cover ' alt="" />
         </div>
     )
@@ -31,14 +31,14 @@ export const Clientcard = (props) => {
 export const WhyUscard = (props) => {
     return (
         <div className='w-1/2 md:w-full h-1/2 flex flex-wrap justify-center items-center '>
-            {/* <div class="w-full h-screen bg-gray-200 flex justify-center items-center"> */}
-            <div class=" w-3/4 h-3/4 relative z-0 border border-black border-dotted ">
+            {/* <div className="w-full h-screen bg-gray-200 flex justify-center items-center"> */}
+            <div className=" w-3/4 h-3/4 relative z-0 border border-black border-dotted ">
                 <div className='flex flex-col'>
 
                     <span className='text-xl text-center font-bold'>Safety & Quality</span>
                     <span className='text-slate-700 text-center'>Praesent pellentesque diam vitae nibh aliquam faucibus.</span>
                 </div>
-                <div class="absolute inset-0 flex justify-center items-center -bottom-60 z-10">
+                <div className="absolute inset-0 flex justify-center items-center -bottom-60 z-10">
                     <div className='bg-slate-700 hover:bg-white rounded-full h-14 w-14' ></div>
                 </div>
             </div>
@@ -62,9 +62,9 @@ export const TitleUnder = (props) => {
 }
 export const TitleOver = (props) => {
     return (
-        <div className='w-full flex pb-10' style={{ alignSelf: 'start' }}>
+        <div className='w-full flex pb-2' style={{ alignSelf: 'start' }}>
             <div className=" flex  flex-col" >
-                <div className="h-1 w-10 bg-gold mb-2" style={{ alignSelf: 'start' }}></div>
+                <div className="h-1 w-10 bg-gold mb-1" style={{ alignSelf: 'start' }}></div>
                 <h1 className="text-2xl font-bold text-gold capitalize" style={{ fontSize: props.fontsize && props.fontsize, color: props.color && props.color }}>{props.title}</h1>
             </div>
         </div>
@@ -90,7 +90,7 @@ export const WhyUscontainer = (props) => {
 
 export function ArrowListItem(props) {
     return (
-        <div className=' text-justify px-5 items-center'>
+        <div className=' text-justify px-5 items-center' style={{ paddingBottom: props.pb }}>
             <div className='flex w-full  '>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
                     className="w-6 h-6 font-bold hover:text-gold text-white">
@@ -236,9 +236,11 @@ export const QuicklinkItem = (props) => {
 
 export const ContactItem = (props) => {
     return (
-        <Link to={props.link} className="flex items-start group my-3 text-[16px]">
+        <Link to={props.link} className="flex items-start group my-10 text-[16px]">
             <span className="flex justify-center items-center"> {props.icon}</span>
-            <span className="text-white text-[16px] group-hover:text-gold">{props.title}</span>
+            <div className=" flex justify-center items-center text-center">
+                <span className="text-white text-xl group-hover:text-gold uppercase">{props.title}</span>
+            </div>
         </Link>
     )
 }
