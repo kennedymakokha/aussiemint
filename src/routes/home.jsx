@@ -9,12 +9,13 @@ import Investors from "../components/investors";
 import Subscription from "../components/subscription";
 import Investor_trust from "../components/investor_trust";
 import News from "../components/news";
+import HomeNavbar from "../containers/HomeNavbar";
 
 
 export default function Home() {
     const [courasel, setCourasel] = useState(0)
     const [title, setTitle] = useState({
-        headline: `<h2 className="text-3xl text-yellow-500">We are <span>Consistent in our Performance</span> through our enhanced operations</h2>`
+        headline: ""
     })
     const TitleFunc = () => {
         if (
@@ -37,7 +38,7 @@ export default function Home() {
             <div className="bg-gray-400 w-full h-full relative z-0">
                 <Gallery title={title} TitleFunc={() => TitleFunc()} setCourasel={setCourasel} />
                 <div className="absolute right-20 left-0 top-0 flex  z-10">
-                    <Navbar courasel={courasel} />
+                    <HomeNavbar courasel={courasel} />
                 </div>
             </div>
 

@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { TitleOver } from "../components";
 import Layout from "../components/layout";
 import bg from './../assets/breadcrumbs/about.png'
-import Assay_img from './../assets/images/img-refinery.png'
-import MIN_img from './../assets/images/MINING.jpg'
+import Assay_img from './../assets/images/refinaries/WhatsApp Image 2023-09-25 at 15.43.27.jpeg'
+import MIN_img from './../assets/images/refinaries/WhatsApp Image 2023-09-25 at 15.43.28 (1).jpeg'
 
 export default function Refining() {
 
     return (
         <Layout details={{ display_name: "refining", sht_desc: "More about Aussiemint", title: "Refining", bg }}>
-            <div className='bg-Refinery_bg md:h-[200%] h-[500%] bg-no-repeat bg-repeat-x w-full flex-col '>
+            <div className='bg-Refinery_bg md:h-auto h-full bg-no-repeat bg-repeat-x w-full flex-col '>
                 <div className="h-full flex w-full flex-col">
                     <div className="flex w-full md:h-1/2 h-full   flex-col  p-1   gap-x-20">
                         {/* <TitleOver title="Plate Based assay" fontSize="18px" color="white" /> */}
@@ -36,12 +36,12 @@ export default function Refining() {
 
 
                     </div>
-                    <div className="flex w-full md:h-1/2 h-full   flex-col  p-1   gap-x-20">
+                    <div className="flex w-full md:h-1/2    flex-col  p-1   gap-x-20">
                         {/* <TitleOver title="Plate Based assay" fontSize="18px" color="white" /> */}
 
                         <div className=" md:flex-row  w-full text-white h-full  flex flex-col   gap-x-10  ">
-                            <div className="md:w-1/2 w-full md:h-full h-[200px]   ">
-                                <img src={Assay_img} className="w-full h-full object-cover border-black border-[1px]" />
+                            <div className="md:w-1/2 w-full md:h-full h-[1200px]   ">
+                                <img src={Assay_img} className="w-full h-[800px] object-cover border-black border-[1px]" />
                             </div>
                             <div className="md:w-1/2 w-full h-full border border-text text-slate-200 text-xl px-20 items-center justify-center  flex flex-col p-1">
                                 <TitleOver title="Refinery Statistics" fontSize="18px" color="white" />

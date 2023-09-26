@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'Refinery_bg': "url('refinery-bg.png')",
+        'price_bg': "url('pricebg.jpg')",
       
       },
       fontFamily: {

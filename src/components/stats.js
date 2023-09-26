@@ -13,7 +13,7 @@ export default function Stats() {
         const interval = setInterval(() => {
             if (count <= countValue) {
                 setCount(count + incValue);
-               return
+                return
             }
         }, 1000);
 
@@ -24,17 +24,17 @@ export default function Stats() {
 
     useEffect(() => {
 
-        counter(10,2)
+        counter(10, 2)
     }, [count])
     return (
 
-        <div className="bg-gray-400 w-full   md:h-3/4 h-[160%] relative z-0 ">
+        <div className="bg-gray-400 w-full    h-full relative z-0 ">
             <img src={bgImage} alt=" " className="w-full h-full" />
             <div className="absolute inset-0 flex flex-col  z-10 bg-slate-900 opacity-[75%] p-10  md:px-[300px]">
                 <TitleOver title="Statistics" fontSize="20px" color="white" />
                 {count}
-                
-                <div className='flex w-full md:h-full h-[480%]  flex-col gap-y-10 '>
+
+                <div className='flex w-full md:h-full h-full  flex-col gap-y-10 '>
                     <div className='h-full flex flex-col w-full  '>
                         <div className='flex w-full h-full flex md:flex-row flex-col justify-center items-center '>
                             <Statistcscontainer stats={{ title: 'Experience', value: `${count}+ yrs` }} />

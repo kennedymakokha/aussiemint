@@ -6,14 +6,12 @@ export default function Investor_trust() {
 
     return (
 
-        <div className="bg-gray-400 w-full   md:h-3/4 h-[160%] relative z-0 ">
+        <div className="bg-gray-400 w-full   md:h-1/2  h-3/4 relative z-0 ">
             <img src={bgImage} alt=" " className="w-full h-full" />
             <div className="absolute inset-0 flex flex-col  z-10 bg-slate-900 opacity-[85%] p-10  md:px-[300px]">
                 <TitleOver title="Investors Trust" fontSize="20px" color="white" />
-                <div className='flex w-full md:h-full h-[480%]  flex-col gap-y-10 '>
-                    <div className='h-full flex flex-col w-full  '>
-
-                    </div>
+                <div className='flex w-full md:h-full h-full  flex-col gap-y-10 '>
+                   
                     <div className='h-full w-full md:gap-y-2 flex  flex-col   text-slate-100 md:text-[20px] text-[14px] md:pl-10 pb-20 '>
                         <p> <span className="font-bold text-gold">Network Coverage (Africa & the World):</span>As a global player in the precious metals refining industry, Aussiemint has established an extensive network that spans not only across Africa but also around the world. </p>
                         <p>Our reach allows us to serve clients from various corners of the globe, facilitating secure and efficient transactions</p>

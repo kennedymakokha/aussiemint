@@ -31,7 +31,7 @@ export default function Gallery(props) {
                         </div>
                     ))}
                 </Carousel>
-                <Calculator />
+                {/* <Calculator /> */}
                 <SliderDetails title={props.title} />
 
             </div>

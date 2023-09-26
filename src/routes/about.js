@@ -67,7 +67,7 @@ export default function About() {
 
                 <div className="w-full flex md:h-[600px] bg-gradient-to-r from-slate-300 to-slate-400  justify-center flex-col  items-center md:px-[300px] py-10">
                     <TitleOver title="Operations-" fontSize="18px" color="black" />
-                    <img src={Isometrics} className="w-full h-[90%] object-cover" />
+                    <img src={Isometrics} className="w-full h-3/4 object-cover" />
                 </div>
 
                 {/* <Footer /> */}

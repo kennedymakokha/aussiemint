@@ -81,7 +81,7 @@ const Navbar = (props) => {
 
           <div className='flex items-center justify-center w-1/6  '>
             <div className={`${props.courasel === 2 ? "text-gold" : "text-black", props.courasel === 2 ? "bg-black" : " bg-[#d2ac67]"
-              }  font-bold  py-2 px-3 `} > 0716017221
+              }  font-bold  py-2 px-3 `} > +254 788 283 594
             </div>
           </div>
         </div>

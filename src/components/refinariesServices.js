@@ -6,7 +6,7 @@ export default function RefServices() {
 
     return (
 
-        <div className='flex w-full md:h-2/3 h-[1000px]  bg-slate-300 md:px-[300px]  p-10  flex-col'>
+        <div className='flex w-full  md:h-full h-auto  bg-slate-300 md:px-[300px]  p-10  flex-col'>
             <TitleOver title="Our Refineries" fontSize="20px" color="black" />
             <div className='flex w-full   md:flex-row flex-col  '>
                 <div className='h-full md:w-1/2 w-full gap-y-2 flex flex-col  p-2  md:text-[20px] text-[14px] pr-10 '>

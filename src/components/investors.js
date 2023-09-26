@@ -12,7 +12,7 @@ export default function Investors() {
     ]
     return (
 
-        <div className='flex w-full md:h-1/3 h-[200%]  md:px-[300px]  p-10 flex-col'>
+        <div className='flex w-full md:h-1/3 h-full  md:px-[300px]  p-10 flex-col'>
 
             {/* <TitleOver title="Our Clients" fontSize="20px" color="black" /> */}
 

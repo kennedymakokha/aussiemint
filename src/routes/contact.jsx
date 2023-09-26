@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="flex w-full h-full bg-slate-100  flex-col md:px-[300px] p-10">
         <TitleOver F title="About us" fontSize="18px" color="black" />
         <div className="  flex h-1/2 w-full ">
-          <div className="md:w-1/3 w-full h-full  text-xl flex flex-col p-1 gap-y-10">
+          <div className="md:w-1/2 w-full h-full  text-xl flex flex-col p-1 gap-y-10">
             <ContactContainer title="Hotline" value="+254 788 283 594" icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
             </svg>} />
@@ -27,7 +27,7 @@ export default function Contact() {
             </svg>
             } />
           </div>
-          <div className="md:w-2/3 w-full h-full   bg-blue-100">
+          <div className="md:w-1/2 w-full h-full   bg-blue-100">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.85168283229!2d36.81449517496565!3d-1.2612513987267424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f171bcc6114cd%3A0x3842565cf6238554!2sAmani%20Plaza!5e0!3m2!1ssw!2ske!4v1695290485464!5m2!1ssw!2ske" className="w-full h-full" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
