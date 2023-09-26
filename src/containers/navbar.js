@@ -81,7 +81,7 @@ const Navbar = (props) => {
 
           <div className='flex items-center justify-center w-1/6  '>
             <div className={`${props.courasel === 2 ? "text-gold" : "text-black", props.courasel === 2 ? "bg-black" : " bg-[#d2ac67]"
-              }  font-bold  py-2 px-3 `} > +254 788 283 594
+              }  font-bold  py-2 px-3 `} > +254788283594
             </div>
           </div>
         </div>
@@ -103,10 +103,10 @@ const Navbar = (props) => {
 
       {/* Mobile Navigation */}
       <div className="sm:hidden flex flex-1 justify-end items-center ">
-        {toggle ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+        {toggle ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" text-white w-8 h-8">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
-          : <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+          : <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className=" text-white w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         }

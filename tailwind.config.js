@@ -8,6 +8,9 @@ module.exports = {
       backgroundImage: {
         'Refinery_bg': "url('refinery-bg.png')",
         'price_bg': "url('pricebg.jpg')",
+        'refining_bg1': "url('refinary1.jpeg')",
+        'refining_bg2': "url('refinary2.jpeg')",
+        
       
       },
       fontFamily: {

@@ -65,7 +65,7 @@ export const TitleOver = (props) => {
         <div className='w-full flex pb-2' style={{ alignSelf: 'start' }}>
             <div className=" flex  flex-col" >
                 <div className="h-1 w-10 bg-gold mb-1" style={{ alignSelf: 'start' }}></div>
-                <h1 className="text-2xl font-bold text-gold capitalize" style={{ fontSize: props.fontsize && props.fontsize, color: props.color && props.color }}>{props.title}</h1>
+                <h1 className="md:text-2xl font-bold text-gold capitalize" style={{ fontSize: props.fontsize && props.fontsize, color: props.color && props.color }}>{props.title}</h1>
             </div>
         </div>
     )
@@ -107,7 +107,7 @@ export function ContactContainer(props) {
     return (
 
         <div className="w-full flex ">
-            <div className="w-1/6 ">
+            <div className="w-1/6 md:flex hidden ">
                 <div className="w-[60px] bg-gold flex h-[60px] rounded-full justify-center items-center ">
                     {props.icon}
                 </div>

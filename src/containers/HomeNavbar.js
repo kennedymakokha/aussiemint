@@ -146,17 +146,71 @@ const HomeNavbar = (props) => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [up, setUp] = useState(false);
+  const [prices, setPrices] = useState({});
+  const [status, setStatus] = useState(false);
+
+  const getApiData = async () => {
+    var myHeaders = new Headers();
+    myHeaders.append("x-access-token", "goldapi-1pgf6rlmylsbqq-io");
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+
+    fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
+      .then(response => response.text())
+      .then(result => {
+        console.log(result["price"])
+      })
+      .catch(error => console.log('error', error));
+
+    // update the state
+    // setStatus(response.success)
+    // setPrices(response.rates);
+  };
 
   useEffect(() => {
+    getApiData();
+  }, []);
+  // useEffect(() => {
 
-    //Implementing the setInterval method
-    const interval = setInterval(() => {
-      setUp((prevState) => !prevState);
-    }, 1000);
+  //   //Implementing the setInterval method
+  //   const interval = setInterval(() => {
+  //     setUp((prevState) => !prevState);
+  //   }, 1000);
 
-    //Clearing the interval
-    return () => clearInterval(interval);
-  }, [up]);
+  //   //Clearing the interval
+  //   return () => clearInterval(interval);
+  // }, [up]);
+  let v = {
+    "timestamp": 1695629281,
+    "metal": "XAU",
+    "currency": "USD",
+    "exchange": "FOREXCOM",
+    "symbol": "FOREXCOM:XAUUSD",
+    "prev_close_price": 1925.26,
+    "open_price": 1925.26,
+    "low_price": 1920.96,
+    "high_price": 1927.23,
+    "open_time": 1695600000,
+    "price": 1923.51,
+    "ch": -1.75,
+    "chp": -0.09,
+    "ask": 1923.81,
+    "bid": 1923.22,
+    "price_gram_24k": 61.8423,
+    "price_gram_22k": 56.6888,
+    "price_gram_21k": 54.112,
+    "price_gram_20k": 51.5352,
+    "price_gram_18k": 46.3817,
+    "price_gram_16k": 41.2282,
+    "price_gram_14k": 36.0747,
+    "price_gram_10k": 25.7676
+  }
+
   return (
     <nav className={`${props.black ? "bg-black" : "bg-transparent"
       } w-full flex  justify-between items-center navbar `}>
@@ -165,8 +219,8 @@ const HomeNavbar = (props) => {
       </div>
       {/* Desktop Navigation */}
       <div className="w-full">
-       
-        <div id="sticky-banner" tabindex="-1" className="md:flex flex-col  px-[170px] fixed  top-0 left-0 md:z-50 -z-16 flex justify-between w-full p-4  dark:bg-gray-700 dark:border-gray-600">
+
+        <div id="sticky-banner" tabindex="-1" className="md:flex flex-col  px-[170px] fixed  top-0 left-0 -z-50  flex justify-between w-full p-4  dark:bg-gray-700 dark:border-gray-600">
           <div className="w-full h-[60px]  text-white flex  justify-between  border-b border-gold py-1   sm:flex hidden justify-end items-center flex-1">
             <div className="w-1/4 h-full  flex justify-center items-center ">
               <img src={Logo} alt="" />
@@ -181,13 +235,13 @@ const HomeNavbar = (props) => {
 
               <div className='flex items-center justify-center w-1/6  '>
                 <div className={`${props.courasel === 2 ? "text-gold" : "text-black", props.courasel === 2 ? "bg-black" : " bg-[#d2ac67]"
-                  }  font-bold  py-2 px-3 `} > +254788283594
+                  }  font-bold  py-2 px-3 `} > +254 788 283 594
                 </div>
               </div>
             </div>
           </div>
           <div className="md:flex hidden items-center w-full h-1/2   ">
-            
+
             {tabs.map((tab, i) => (
               <TabContainer tab={tab} up={up} key={i} />
             ))}
@@ -222,10 +276,10 @@ const HomeNavbar = (props) => {
 
       {/* Mobile Navigation */}
       <div className="sm:hidden flex flex-1 justify-end items-center ">
-        {toggle ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+        {toggle ? <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
-          : <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+          : <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setToggle(!toggle)} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-white">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         }

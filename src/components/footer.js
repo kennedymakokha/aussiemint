@@ -5,7 +5,7 @@ import Logo from './../assets/aussie-logo.png'
 
 export default function Footer(props) {
     return (
-        <div className='flex w-full md:h-full h-[full] bg-black flex-col ' >
+        <div className='flex w-full md:h-1/2 h-full bg-black flex-col ' >
             <div className="bg-black w-full h-full flex gap-x-1 md:flex-row flex-col  md:px-[100px]">
                 <div className="md:w-1/4 w-full  h-full  md:p-10  p-2 flex-col gap-y-[10px]">
                     <img src={Logo} alt="" />
